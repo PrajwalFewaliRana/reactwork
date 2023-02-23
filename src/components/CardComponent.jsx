@@ -8,7 +8,7 @@ const CardComponent = (props) => {
     </figure>
     <div className="info mt-5">
       <h3 className="title text-2xl font-bold">
-        {props.title.length > 25 ? `${props.title.slice(0,25)}...` : `${props.title}`}
+        {props.title.length > 18 ? `${props.title.slice(0,18)}...` : `${props.title}`}
       </h3>
       <h3 className='meta'>
         Posted by {props.userId ===1 ? 'Ram' : ''}
@@ -17,7 +17,7 @@ const CardComponent = (props) => {
         {props.userId ===4 ? 'Gita' : ''}
         </h3>
       <p className="text text-slate-500 my-5">
-        {props.text.length>110 ? `${props.text.slice(0,110)}...`: `${props.title}`}
+        {props.text.length>110 ? `${props.text.slice(0,110)}...`: `${props.text}`}
       </p>
       <a href={props.link}>
         <button className="bg-white px-5 shadow py-2 rounded">
