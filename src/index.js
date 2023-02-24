@@ -6,6 +6,7 @@ import LayoutComponent from './components/LayoutComponent';
 import ErrorPage from './Pages/ErrorPage';
 import AboutPage from './Pages/AboutPage';
 import HomePage from './Pages/HomePage';
+import UserDetailsPage from './Pages/UserDetailsPage';
 
 const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
         {
           path: "/about-us",
           element: <AboutPage />,
+        },
+        {
+          path: "/contact/:contactId",
+          element: <UserDetailsPage />,
         },
       
       ],

@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 
 const SideBar = () => {
@@ -13,12 +14,13 @@ const SideBar = () => {
   
   return (
     <div className='h-[50vh] sticky top-0'>
-    <h3 className="title font-bold text-2xl mb-2" >Most Popular Users</h3>
+    <h3 className="title font-bold text-xl mb-2" >Most Popular Users</h3>
     <ul>
       {users.map((user)=>(
 
         <li key={user.id}>
-         <a href="/home">{user.name}</a>
+          <Link to={`/contact/${user.id}`}>{user.name}</Link>
+        
         </li>
         ))}
       
